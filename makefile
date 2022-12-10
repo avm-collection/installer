@@ -29,8 +29,11 @@ $(ANASM):
 
 install: $(AVM) $(ANASM)
 
+uninstall:
+	rm $(AVM) $(ANASM)
+
 clean:
 	rm -r $(AVM_FOLDER) $(ANASM_FOLDER)
 
 all:
-	@echo compile, install, clean
+	@echo compile, install, uninstall, clean
