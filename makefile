@@ -15,10 +15,10 @@ $(AVM_FOLDER):
 $(ANASM_FOLDER):
 	git clone https://github.com/LordOfTrident/anasm
 
-$(AVM_BIN):
+$(AVM_BIN): $(AVM_FOLDER)
 	cd $(AVM_FOLDER) && $(MAKE)
 
-$(ANASM_BIN):
+$(ANASM_BIN): $(ANASM_FOLDER)
 	cd $(ANASM_FOLDER) && $(MAKE)
 
 $(AVM):
